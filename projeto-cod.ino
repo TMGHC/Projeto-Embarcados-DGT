@@ -62,7 +62,7 @@ void ativarAlarmeN() {
   ALARME = true;
   Serial.println("Altos niveis de gás (ppm) detectados!");
   tone(BUZZER, 400);
-  temporizadorN.attach(5, enviarNotificacao);
+  temporizadorN.attach(60, enviarNotificacao);
   Serial.println("Contagem de 1 minuto iniciada para envio de notificacao");
 }
 
@@ -113,4 +113,5 @@ void loop() {
 
   delay(1000);
 }
+
 //
